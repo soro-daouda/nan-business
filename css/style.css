@@ -1,0 +1,406 @@
+/* General code*/
+
+:root{
+    --color-white: #fff;
+    --nan-color: #777fff;
+    --color-black: #000;
+    --nan-green-color: #14a2b7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+
+/* secondary code*/
+
+/* header */
+
+header{
+    height: 80vh;
+}
+.header-box{
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 75%, 0 60%);
+    background: linear-gradient(rgba(75, 73, 73, 0.938) ,rgba(68, 65, 65, 0.171)), url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.logo-nan {
+    height: 15rem;
+    width: 15rem;
+    float: left;
+    margin-top: 4rem;
+    margin-left: 5rem;
+}
+
+.logo-nan a:hover{
+    text-decoration: none;
+}
+
+/* [SLIDER] */
+#slider{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+#slider,  #slider .slide{
+    width: 100rem;
+    height: 30rem;
+}
+#slider .cont {
+    position: relative;
+    width: 900rem; /* Assign an insanely large width */
+    top: 0;
+    right: 0;
+    animation: slide-animation 25s infinite;
+}
+
+#slider h3{
+    font-size: 7rem;
+    text-align: center;
+    color: var(--color-white);
+}
+
+#slider h3 span{
+    font-size: 9rem;
+    color: #777FFE;
+}
+
+#slider .slide {
+    position: relative;
+    float: left;
+    padding: 1rem 2rem;
+}
+/* [ANIMATION] */
+@keyframes slide-animation {
+    0% { 
+        opacity: 0;
+        right: 0;
+    }
+    11% {
+        opacity: 1;
+        right: 0; 
+    }
+    22% { right: 100%; }
+    33% { right: 100%; }
+    44% { right: 200%; }
+    55% { right: 200%; }
+    66% { right: 300%; }
+    77% { right: 300%; }
+    88% {
+        opacity: 1;
+        right: 400%; 
+    }
+    100% {
+        opacity: 0;
+        right: 400%;
+    }
+}
+
+
+/* ******* qui sommes-nous ******** */
+
+.about h1{
+    color: var(--nan-green-color);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* ********* grandes categories de produit ********** */
+
+.s-title_product{
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: var(--nan-green-color);
+    margin: 5rem 0 7rem 0;
+}
+
+.s-title_product .divider{
+    width: 30%;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: var(--nan-green-color);
+    height: .01rem;
+}
+
+.s-category{
+    margin-bottom: 6rem;
+}
+
+.s-categories_produit{
+    min-height: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.s-categories_produit .s-logo_produit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-right: 3rem;
+    background: rgba(216, 216, 216, 0.664);
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.s-categories_produit .s-box_formation,
+.s-description{
+    padding: 0;
+}
+
+.s-description{
+    display: flex;
+    align-items: center;
+}
+
+.s-description hr{
+    height: .7rem;
+    width: 70%;
+    border: 0;
+    background-color: rgba(216, 216, 216, 0.664);
+}
+
+.s-description h1{
+    text-transform: uppercase;
+    color: var(--nan-color);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.s-description .s-descrip{
+    width: 75%;
+    font-size: 1.5rem;
+}
+
+.s-description a{
+    color: var(--nan-green-color);
+    border: 1px solid var(--nan-green-color);
+    padding: .5rem 1.3rem;
+    transition: all .3s;
+    font-size: 1.9rem;
+}
+
+.s-description a:hover{
+    text-decoration: none;
+    border: none;
+}
+
+.s-description .plus{
+    transition: all .3s;
+}
+
+.s-description .s-voir_plus{
+
+    margin: 2rem 0 2rem 0;
+}
+
+.s-description .s-voir_plus:hover .plus{
+    margin-right: 1rem;
+}
+
+.s-description img{
+    height: 1.7rem;
+    margin-left: .5rem;
+}
+
+.s-para_img{
+    margin: 0;
+}
+
+.s-para_img img{
+    height: 6rem;
+}
+
+
+
+/* ***********   Footer ************* */
+
+footer{
+    background: #0d0e1c;
+    color: #e2e4f5;
+    padding: 6rem 0;
+}
+
+.s-ul_footer{
+    margin-bottom: 1rem;
+}
+
+.s-ul_footer li{
+    list-style: none;
+    display: inline;
+    padding: 0 .7rem;
+}
+
+.s-ul_footer img{
+    height: 3.4rem;
+}
+
+footer h6{
+    font-size: 1.5rem;
+}
+
+
+
+/* media query grandes categories de produit */
+
+@media screen and (max-width: 767px){
+
+    .s-categories_produit .s-logo_produit{
+        margin-right: 0;
+    }
+
+    .s-box_formation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .s-description h1{
+        margin-top: 2rem;
+    }
+
+    .s-description .s-descrip{
+        margin: auto;
+    }
+
+    .content-formation{
+        text-align: center;
+    }
+
+    .s-description .s-voir_plus{
+        margin-top: 1.2rem;
+    }
+
+    .s-description hr{
+        margin: auto;
+    }
+
+    .s-categories_produit{
+        margin-top: 7rem;
+    }
+
+}
+
+@media screen and (max-width: 420px){
+
+    .s-categories_produit .s-logo_produit{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+
+    .s-para_img img{
+        height: 4rem;
+    }
+
+    .s-description h1{
+        font-size: 2.3rem;
+    }
+
+    .s-description .s-descrip{
+        font-size: 1.5rem;
+    }
+
+    .s-categories_produit{
+        margin-top: 5rem;
+    }
+
+}
+
+
+/* media query header */
+
+@media screen and (max-width: 1001px){
+    .header-box{
+        width: 100%;
+        height: 90vh;
+    }
+    .logo-nan {
+        height: 15rem;
+        width: 15rem;
+
+    }
+    #slider h3{
+        font-size: 5rem;
+    }
+    #slider h3 span{
+        font-size: 7rem;
+    }
+    #slider,  #slider .slide{
+        width: 60rem;
+        min-height: 40rem;
+        top: 25rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .header-box{
+        height: 100vh;
+    }
+    .logo-nan {
+        height: 13.5rem;
+        width: 13.5rem;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+    #slider h3{
+        font-size: 3rem;
+    }
+    #slider h3 span{
+        font-size: 4rem;
+    }
+    #slider,  #slider .slide{
+        width: 40rem;
+        min-height: 13rem;
+        top: 16rem;
+        overflow-x: none;
+    }
+
+    .about h1{
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .header-box{
+        width: 100%;
+    }
+    .logo-nan {
+        height: 12rem;
+        width: 12rem;
+    }
+    #slider h3{
+        font-size: 3rem;
+    }
+    #slider h3 span{
+        font-size: 5rem;
+    }
+    #slider,  #slider .slide{
+        width: 37rem;
+        top: 15rem;
+
+    }
+}
